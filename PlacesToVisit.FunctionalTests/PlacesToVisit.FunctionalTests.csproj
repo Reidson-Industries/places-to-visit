@@ -38,10 +38,18 @@
       <HintPath>..\PlacesToVisit.IntegrationTests\bin\Debug\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Client">
-      <HintPath>..\Recipe 1\bin\ServiceStack.Client.dll</HintPath>
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Client.4.0.21\lib\net40\ServiceStack.Client.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\Recipe 1\bin\ServiceStack.Interfaces.dll</HintPath>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Common.4.0.21\lib\net40\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Interfaces.4.0.21\lib\net40\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Text.4.0.21\lib\net40\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,6 +68,9 @@
       <Project>{3cd88ade-a873-4ce6-9858-d36ac12de89a}</Project>
       <Name>PlacesToVisit.ServiceModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

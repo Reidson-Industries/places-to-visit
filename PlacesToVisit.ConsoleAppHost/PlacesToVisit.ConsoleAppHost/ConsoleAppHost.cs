@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Funq;
+﻿using Funq;
 using PlacesToVisit.ServiceInterface;
 using PlacesToVisit.ServiceInterface.DataRepository;
 using PlacesToVisit.ServiceModel;
@@ -39,11 +35,11 @@ namespace PlacesToVisit.ConsoleAppHost
             Plugins.Add(new ValidationFeature());
             Plugins.Add(
                 new AuthFeature(() =>
-                                new AuthUserSession(),
-                                new IAuthProvider[]
-                                    {
-                                        new BasicAuthProvider()
-                                    }));
+                    new AuthUserSession(),
+                    new IAuthProvider[]
+                    {
+                        new BasicAuthProvider()
+                    }));
         }
 
         private void CreateUsers(Container container)
@@ -62,34 +58,32 @@ namespace PlacesToVisit.ConsoleAppHost
                 out pwHash,
                 out pwSalt);
 
-            var userAuth1 = userRep.CreateUserAuth(new UserAuth
-                                                       {
-                                                           Email = "darren.reid@reidsoninsdustries.net",
-                                                           DisplayName = "Darren",
-                                                           UserName = "darrenreid",
-                                                           FirstName = "Darren",
-                                                           LastName = "Reid",
-                                                           PasswordHash = pwHash,
-                                                           Salt = pwSalt,
-                                                           Roles = {"Admin"}
-
-                                                       }, "abc123");
+            IUserAuth userAuth1 = userRep.CreateUserAuth(new UserAuth
+            {
+                Email = "darren.reid@reidsoninsdustries.net",
+                DisplayName = "Darren",
+                UserName = "darrenreid",
+                FirstName = "Darren",
+                LastName = "Reid",
+                PasswordHash = pwHash,
+                Salt = pwSalt,
+                Roles = {"Admin"}
+            }, "abc123");
 
             var user1 = userAuth1.ConvertTo<User>();
             dataRepository.CreateUserIfNotExists(user1);
 
-            var userAuth2 = userRep.CreateUserAuth(new UserAuth
-                                                       {
-                                                           Email = "kyle.hodgson@reidsoninsdustries.net",
-                                                           DisplayName = "Kyle",
-                                                           UserName = "kylehodgson",
-                                                           FirstName = "Kyle",
-                                                           LastName = "Hodgson",
-                                                           PasswordHash = pwHash,
-                                                           Salt = pwSalt,
-                                                           Roles = {"Admin"}
-
-                                                       }, "123abc");
+            IUserAuth userAuth2 = userRep.CreateUserAuth(new UserAuth
+            {
+                Email = "kyle.hodgson@reidsoninsdustries.net",
+                DisplayName = "Kyle",
+                UserName = "kylehodgson",
+                FirstName = "Kyle",
+                LastName = "Hodgson",
+                PasswordHash = pwHash,
+                Salt = pwSalt,
+                Roles = {"Admin"}
+            }, "123abc");
 
             var user2 = userAuth2.ConvertTo<User>();
             dataRepository.CreateUserIfNotExists(user2);
@@ -98,22 +92,22 @@ namespace PlacesToVisit.ConsoleAppHost
         private void SeedPlaces(IPlacesToVisitRepository repository)
         {
             repository.CreatePlace(new Place
-                                       {
-                                           Name = "Canberra",
-                                           Description = "Capital city of Australia"
-                                       });
+            {
+                Name = "Canberra",
+                Description = "Capital city of Australia"
+            });
 
             repository.CreatePlace(new Place
-                                       {
-                                           Name = "Toronto",
-                                           Description = "Provincial capital of Ontario"
-                                       });
+            {
+                Name = "Toronto",
+                Description = "Provincial capital of Ontario"
+            });
 
             repository.CreatePlace(new Place
-                                       {
-                                           Name = "Auckland, New Zealand",
-                                           Description = "A city in the north island"
-                                       });
+            {
+                Name = "Auckland, New Zealand",
+                Description = "A city in the north island"
+            });
         }
     }
 }

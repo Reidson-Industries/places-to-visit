@@ -30,29 +30,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ServiceStack, Version=4.0.21.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Recipe2\packages\ServiceStack.4.0.21\lib\net40\ServiceStack.dll</HintPath>
+    <Reference Include="ServiceStack">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.4.0.21\lib\net40\ServiceStack.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Client, Version=4.0.21.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Recipe2\packages\ServiceStack.Client.4.0.21\lib\net40\ServiceStack.Client.dll</HintPath>
+    <Reference Include="ServiceStack.Client">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Client.4.0.21\lib\net40\ServiceStack.Client.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Common, Version=4.0.21.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Recipe2\packages\ServiceStack.Common.4.0.21\lib\net40\ServiceStack.Common.dll</HintPath>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Common.4.0.21\lib\net40\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Recipe2\packages\ServiceStack.Interfaces.4.0.21\lib\net40\ServiceStack.Interfaces.dll</HintPath>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Interfaces.4.0.21\lib\net40\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="ServiceStack.OrmLite, Version=4.0.21.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Recipe2\packages\ServiceStack.OrmLite.4.0.21\lib\net40\ServiceStack.OrmLite.dll</HintPath>
+    <Reference Include="ServiceStack.OrmLite">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.OrmLite.4.0.21\lib\net40\ServiceStack.OrmLite.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="ServiceStack.Text, Version=4.0.21.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Recipe2\packages\ServiceStack.Text.4.0.21\lib\net40\ServiceStack.Text.dll</HintPath>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Text.4.0.21\lib\net40\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
