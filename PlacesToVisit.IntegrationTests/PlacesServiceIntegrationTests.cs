@@ -22,20 +22,7 @@ namespace PlacesToVisit.IntegrationTests
         [TestFixtureSetUp]
         public void TestFixtureSetUp()
         {
-            appHost = new BasicAppHost().Init();
-            var container = appHost.Container;
-
-            container.Register<IDbConnectionFactory>(
-                new OrmLiteConnectionFactory(":memory:", SqliteDialect.Provider));
-
-            container.RegisterAutoWiredAs<PlacesToVisitRepository,IPlacesToVisitRepository>();
-            container.RegisterAutoWired<PlaceService>();
-
-            using (var db = container.Resolve<IDbConnectionFactory>().Open())
-            {
-                db.DropAndCreateTable<Place>();
-                db.Insert(new Place {Description = "Test Object Description", Name = "Test Object Name"});
-            }
+            appHost = new TestAppHost().Init().Start("http://*:1234/api/");           
         }
 
         [TestFixtureTearDown]
