@@ -1,4 +1,4 @@
-places-to-visit
+Places to Visit
 ===============
 
-Places to Visit App
+This demo service stack application is part of the book "ServiceStack Cookbook" by Darren Reid and Kyle Hodgson.
