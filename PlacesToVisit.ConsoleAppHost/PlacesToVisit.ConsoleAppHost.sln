@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlacesToVisit.ServiceModel"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlacesToVisit.ServiceInterface", "..\PlacesToVisit.ServiceInterface\PlacesToVisit.ServiceInterface.csproj", "{832B5F9F-D722-4FA9-B390-8F6E4B948687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlacesToVisit.IntegrationTests", "..\PlacesToVisit.IntegrationTests\PlacesToVisit.IntegrationTests.csproj", "{E05C5610-2724-466A-95DB-A67F6742295F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{832B5F9F-D722-4FA9-B390-8F6E4B948687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{832B5F9F-D722-4FA9-B390-8F6E4B948687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{832B5F9F-D722-4FA9-B390-8F6E4B948687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E05C5610-2724-466A-95DB-A67F6742295F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E05C5610-2724-466A-95DB-A67F6742295F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E05C5610-2724-466A-95DB-A67F6742295F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E05C5610-2724-466A-95DB-A67F6742295F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
