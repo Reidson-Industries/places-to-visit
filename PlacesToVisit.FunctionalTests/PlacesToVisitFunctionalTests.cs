@@ -8,17 +8,17 @@ using ServiceStack;
 
 namespace PlacesToVisit.FunctionalTests
 {
-
+    [Ignore("App must be listening.")]
     [TestFixture]
     public class PlacesToVisitFunctionalTests
     {
         [Test]
-        public void ShouldGetPlacesToVisit()
+        public void JsonClientShouldGetPlacesToVisit()
         {
             var client = new JsonServiceClient("http://localhost:1337/");
             var testRequest = new AllPlacesToVisitRequest();
             var response = client.Get(testRequest);
-            Assert.AreEqual(true,true,"Make sure we have a working test harness.");
+            Assert.AreEqual("Capital city of Australia",response.Places.FirstOrDefault().Description);
         }
     }
 }

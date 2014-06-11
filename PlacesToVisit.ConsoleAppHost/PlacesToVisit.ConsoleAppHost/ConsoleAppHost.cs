@@ -23,7 +23,7 @@ namespace PlacesToVisit.ConsoleAppHost
             container.RegisterAutoWired<PlacesToVisitAppSettings>();
             var appSettings = container.Resolve<PlacesToVisitAppSettings>();
             var dbFactory = new OrmLiteConnectionFactory(
-                appSettings.Get("sqlLiteConnectionString", "").MapHostAbsolutePath(), SqliteDialect.Provider);
+                "Data Source=mydb.db;Version=3;", SqliteDialect.Provider);
             container.Register<IDbConnectionFactory>(dbFactory);
             container.RegisterAutoWiredAs<PlacesToVisitRepository, IPlacesToVisitRepository>();
 
