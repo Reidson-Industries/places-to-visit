@@ -14,14 +14,11 @@ namespace PlacesToVisit.ConsoleAppHost
     {
         public ConsoleAppHost()
             : base("Console Places To Visit", typeof (PlaceService).Assembly)
-        {
-        }
+        { }
 
 
         public override void Configure(Container container)
         {
-            container.RegisterAutoWired<PlacesToVisitAppSettings>();
-            var appSettings = container.Resolve<PlacesToVisitAppSettings>();
             var dbFactory = new OrmLiteConnectionFactory(
                 "Data Source=mydb.db;Version=3;", SqliteDialect.Provider);
             container.Register<IDbConnectionFactory>(dbFactory);
