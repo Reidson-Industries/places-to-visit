@@ -8,7 +8,7 @@ using ServiceStack;
 
 namespace PlacesToVisit.FunctionalTests
 {
-    [Ignore("App must be listening.")]
+    
     [TestFixture]
     public class PlacesToVisitFunctionalTests
     {
