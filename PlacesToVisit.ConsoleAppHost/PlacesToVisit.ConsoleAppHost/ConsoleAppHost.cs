@@ -13,7 +13,7 @@ namespace PlacesToVisit.ConsoleAppHost
     internal class ConsoleAppHost : AppSelfHostBase
     {
         public ConsoleAppHost()
-            : base("", typeof (PlaceService).Assembly)
+            : base("Console Places To Visit", typeof (PlaceService).Assembly)
         {
         }
 
