@@ -48,6 +48,12 @@
       <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.OrmLite.4.0.21\lib\net40\ServiceStack.OrmLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Redis.4.0.35\lib\net40\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Server">
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Server.4.0.35\lib\net45\ServiceStack.Server.dll</HintPath>
+    </Reference>
     <Reference Include="ServiceStack.Text">
       <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Text.4.0.21\lib\net40\ServiceStack.Text.dll</HintPath>
       <Private>True</Private>

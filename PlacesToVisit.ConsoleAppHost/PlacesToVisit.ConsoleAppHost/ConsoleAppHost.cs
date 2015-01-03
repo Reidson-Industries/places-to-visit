@@ -7,7 +7,6 @@ using ServiceStack.Auth;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
 using ServiceStack.Validation;
-using Container = Funq.Container;
 
 namespace PlacesToVisit.ConsoleAppHost
 {
