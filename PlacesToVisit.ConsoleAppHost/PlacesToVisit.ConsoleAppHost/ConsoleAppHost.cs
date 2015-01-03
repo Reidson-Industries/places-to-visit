@@ -7,6 +7,7 @@ using ServiceStack.Auth;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
 using ServiceStack.Validation;
+using Container = Funq.Container;
 
 namespace PlacesToVisit.ConsoleAppHost
 {
@@ -55,7 +56,7 @@ namespace PlacesToVisit.ConsoleAppHost
                 out pwHash,
                 out pwSalt);
 
-            IUserAuth userAuth1 = userRep.CreateUserAuth(new UserAuth
+            var userAuth1 = userRep.CreateUserAuth(new UserAuth
             {
                 Email = "darren.reid@reidsoninsdustries.net",
                 DisplayName = "Darren",
@@ -70,7 +71,7 @@ namespace PlacesToVisit.ConsoleAppHost
             var user1 = userAuth1.ConvertTo<User>();
             dataRepository.CreateUserIfNotExists(user1);
 
-            IUserAuth userAuth2 = userRep.CreateUserAuth(new UserAuth
+            var userAuth2 = userRep.CreateUserAuth(new UserAuth
             {
                 Email = "kyle.hodgson@reidsoninsdustries.net",
                 DisplayName = "Kyle",
