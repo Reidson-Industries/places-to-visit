@@ -11,6 +11,7 @@ using PlacesToVisit.ServiceModel;
 using ServiceStack;
 using ServiceStack.Data;
 using ServiceStack.OrmLite;
+using ServiceStack.Testing;
 
 namespace PlacesToVisit.IntegrationTests
 {
@@ -22,19 +23,23 @@ namespace PlacesToVisit.IntegrationTests
 
         }
 
+        public Action<Container> ConfigureContainer { get; set; }
+        public Action<ServiceStackHost> ConfigureAppHost { get; set; }
+
         public override void Configure(Container container)
         {
-            container.Register<IDbConnectionFactory>(
-               new OrmLiteConnectionFactory(":memory:", SqliteDialect.Provider));
-
-            container.RegisterAutoWiredAs<PlacesToVisitRepository, IPlacesToVisitRepository>();
-            container.RegisterAutoWired<PlaceService>();
-
-            using (var db = container.Resolve<IDbConnectionFactory>().Open())
-            {
-                db.DropAndCreateTable<Place>();
-                db.Insert(new Place { Description = "Test Object Description", Name = "Test Object Name" });
-            }
+            if (this.ConfigureContainer == null)
+                return;
+            this.ConfigureContainer(container);
         }
+
+        public override void OnBeforeInit()
+        {
+            if (this.ConfigureAppHost != null)
+                this.ConfigureAppHost(this);
+            base.OnBeforeInit();
+        }
+
+
     }
 }

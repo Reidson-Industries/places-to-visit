@@ -82,6 +82,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PlacesToVisit.ConsoleAppHost\PlacesToVisit.ConsoleAppHost\PlacesToVisit.ConsoleAppHost.csproj">
+      <Project>{CB8ED236-C98F-426A-B9FD-0474957EE1AE}</Project>
+      <Name>PlacesToVisit.ConsoleAppHost</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PlacesToVisit.ServiceInterface\PlacesToVisit.ServiceInterface.csproj">
       <Project>{832b5f9f-d722-4fa9-b390-8f6e4b948687}</Project>
       <Name>PlacesToVisit.ServiceInterface</Name>
