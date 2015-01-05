@@ -11,6 +11,7 @@
     <AssemblyName>PlacesToVisit.ServiceInterface</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,31 +32,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ServiceStack">
-      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.4.0.21\lib\net40\ServiceStack.dll</HintPath>
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.4.0.35\lib\net40\ServiceStack.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Client">
-      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Client.4.0.21\lib\net40\ServiceStack.Client.dll</HintPath>
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Client.4.0.35\lib\net40\ServiceStack.Client.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Common">
-      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Common.4.0.21\lib\net40\ServiceStack.Common.dll</HintPath>
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Common.4.0.35\lib\net40\ServiceStack.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Interfaces.4.0.21\lib\net40\ServiceStack.Interfaces.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Interfaces.4.0.35\lib\portable-wp80+sl5+net40+win8+monotouch+monoandroid\ServiceStack.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.OrmLite">
-      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.OrmLite.4.0.21\lib\net40\ServiceStack.OrmLite.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="ServiceStack.Redis">
-      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Redis.4.0.35\lib\net40\ServiceStack.Redis.dll</HintPath>
+    <Reference Include="ServiceStack.OrmLite, Version=4.0.35.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.OrmLite.4.0.35\lib\net45\ServiceStack.OrmLite.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Server">
       <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Server.4.0.35\lib\net45\ServiceStack.Server.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Text">
-      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Text.4.0.21\lib\net40\ServiceStack.Text.dll</HintPath>
+      <HintPath>..\PlacesToVisit.ConsoleAppHost\packages\ServiceStack.Text.4.0.35\lib\net40\ServiceStack.Text.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

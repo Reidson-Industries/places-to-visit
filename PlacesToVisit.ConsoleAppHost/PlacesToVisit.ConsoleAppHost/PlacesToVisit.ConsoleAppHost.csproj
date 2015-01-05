@@ -39,12 +39,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack, Version=4.0.21.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="ServiceStack, Version=4.0.35.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\ServiceStack.4.0.21\lib\net40\ServiceStack.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.4.0.35\lib\net40\ServiceStack.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Client">
-      <HintPath>..\packages\ServiceStack.Client.4.0.21\lib\net40\ServiceStack.Client.dll</HintPath>
+      <HintPath>..\packages\ServiceStack.Client.4.0.35\lib\net40\ServiceStack.Client.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Common, Version=4.0.35.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -57,6 +57,12 @@
     <Reference Include="ServiceStack.OrmLite, Version=4.0.35.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ServiceStack.OrmLite.4.0.35\lib\net45\ServiceStack.OrmLite.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite.Sqlite.Windows">
+      <HintPath>..\packages\ServiceStack.OrmLite.Sqlite.Windows.4.0.35\lib\net40\ServiceStack.OrmLite.Sqlite.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Server">
+      <HintPath>..\packages\ServiceStack.Server.4.0.35\lib\net45\ServiceStack.Server.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Text, Version=4.0.35.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -83,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PlacesToVisit.ServiceInterface\PlacesToVisit.ServiceInterface.csproj">
-      <Project>{832b5f9f-d722-4fa9-b390-8f6e4b948687}</Project>
+      <Project>{832B5F9F-D722-4FA9-B390-8F6E4B948687}</Project>
       <Name>PlacesToVisit.ServiceInterface</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\PlacesToVisit.ServiceModel\PlacesToVisit.ServiceModel.csproj">
